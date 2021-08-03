@@ -19,7 +19,7 @@ public class DialogStyle extends DialogFragment {
     private SeekBar seekBar;
 
     private int colorSelected = 0;
-    private int grosorSelected = 10;
+    private int grosorSelected = 0;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class DialogStyle extends DialogFragment {
         View view = getContentView();
 
         seekBar = view.findViewById(R.id.seekbar);
+        seekBar.setProgress(10);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
